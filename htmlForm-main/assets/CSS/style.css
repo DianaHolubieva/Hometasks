@@ -1,0 +1,146 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+
+body{
+    background-color: rgb(0, 162, 255);
+}
+form{
+    box-sizing: border-box;
+    width: 600px;
+    height: 800px;
+    margin:25px 450px 0px;
+}
+.title{
+    text-align: center;
+    color: white;
+}
+h1{
+    font-weight: bold;
+    font-size: 45px;
+}
+.title > p{
+    font-weight: bold;
+    font-size: 18px;
+}
+.input{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.input > input{
+    width:45%;
+    height: 65px;
+    border: 5px solid transparent;
+    border-radius: /*7%;не закругляет*/;
+    margin: 10px 15px 10px;
+}
+.agreement{
+    display: flex;
+    flex-direction: column;
+}
+._1{
+    width: 573px;
+    height: 90px;
+    border: 1px solid white;
+    margin: 15px 15px 10px;
+}
+._1 > span{
+    color:white;
+    font-size: 130%;
+}
+._1 > p{
+    color: white;
+    font-size: 85%;
+    margin-left: 20px;
+} 
+._2{
+    margin: 5px 20px 10px;
+}
+._2 > span{
+    color: white;
+    font-size: 95%;
+}
+input[type=button]{
+    background-color: rgb(83, 216, 221);
+    border: 2px solid transparent;
+    border-radius: ;
+    color: white;
+    font-weight: bold;
+    width: 550px;
+    height: 65px;
+    margin: 5px 25px 10px;
+    font-size: 120%;
+}
+._3 > p, a{
+    text-align: center;
+    color: white;
+    font-size: 110%;
+}

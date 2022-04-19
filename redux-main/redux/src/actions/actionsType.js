@@ -1,0 +1,5 @@
+const ACTION_TYPES = {
+  AUTH_LOGIN: 'AUTH_LOGIN',
+  AUTH_CLEAR: 'AUTH_CLEAR',
+};
+export default ACTION_TYPES;

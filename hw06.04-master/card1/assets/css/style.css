@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px;
+    height: 400px;
+}
+.card{
+    height: 300px;
+    width: 250px;
+    text-align: center;
+    border:1px solid black;
+    position: relative;
+    margin: 80px;
+}
+.title{
+    font-size: 20px;
+}
+.txt{
+    color: #d0c9c9;
+}
+button{
+    height: 50px;
+    width: 125px;
+    background-color: white;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    border: 1px solid black;
+    margin-top: -50px;
+    margin-left: 90px;
+}

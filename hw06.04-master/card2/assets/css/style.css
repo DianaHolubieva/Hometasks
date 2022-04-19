@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+}
+
+.white{
+    max-width: 770px;
+    height: 700px;
+    background-color: aliceblue;
+    /*position: relative;*/
+    /*z-index: 1;*/
+}
+
+.blueBig{
+    max-width: 770px;
+    height: 300px;
+    background-color: cornflowerblue;
+    /*position: absolute;*/
+    /*z-index: 2;*/
+
+}
+
+.blueLtl{
+    max-width: 140px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: cornflowerblue;
+    /*position: absolute;*/
+    /*z-index: 2;*/
+}
+
+.wrapper{
+    display: flex;
+
+}
+
+.purple{
+    width: 215px;
+    height: 215px;
+    border-radius: 10px;
+    margin: 20px;
+    background-color: darkslateblue;
+    /*position: absolute;*/
+    /*z-index: 3;*/
+}
+

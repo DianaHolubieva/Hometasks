@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+}
+
+.someCards{
+    display: flex;
+    /*justify-content: center; ?? не работает..*/
+    margin: 100px;
+    background-color: aqua;
+    flex-wrap: wrap;
+    width: 900px;
+    height: 600px;
+}
+
+
+.card{
+    display: inline-flex;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 5px;
+    width: 400px;
+    height: 150px;
+    margin: 15px;
+}
+
+.txt{
+    box-sizing: border-box;
+    width: 350px;
+    height: 140px;
+}
+
+.title{
+    font-size: 130%;
+    color: #fd8501;
+}

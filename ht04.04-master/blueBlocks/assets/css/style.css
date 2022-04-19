@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+}
+
+.cards{
+    margin: 100px;
+    max-width: 650px;
+}
+
+.widgets{
+    box-sizing: border-box;
+    width: 650px;
+    height: 150px;
+    background-color: #6f6fff;
+    text-align: center;
+    font-size: 150%;
+    color: white;
+}
+
+.typesOfWidgets{
+    display: flex;
+}
+
+.bigWidgets{
+    text-align: center;
+    box-sizing: border-box;
+    width: 205px;
+    height: 150px;
+    margin-top: 15px;
+    background-color: #242477;
+    color: white;
+}
+
+.biggerWidgets{
+    box-sizing: border-box;
+    width: 205px;
+    height: 150px;
+    margin-top: 15px;
+    margin-left: 15px;
+    text-align: center;
+    background-color: #242477;
+    color: white;
+}
+
+.hugeWidgets{
+    box-sizing: border-box;
+    width: 205px;
+    height: 150px;
+    margin-left: 15px;
+    margin-top: 15px;
+    background-color: #242477;
+    color: white;
+}
+
+.contact{
+    box-sizing: border-box;
+    width: 650px;
+    height: 400px;
+    background-color: #6f6fff;
+    margin-top: 15px;
+    font-size: 150%;
+    color: white;
+    text-align: center;
+}
+
