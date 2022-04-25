@@ -1,6 +1,6 @@
 // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
 
-function  areaRectangle(a = 15, b = 20){
+function  areaRectangle(a, b){
     let res = a * b;
     return res;
 }
@@ -10,7 +10,7 @@ console.log(answer);
 
 // - створити функцію яка обчислює та повертає площу кола з радіусом r
 
-function  areaCircle(r = 25){
+function  areaCircle(r){
     let res = r * r * 3.14;
     return res;
 }
@@ -20,7 +20,7 @@ console.log(answer);
 
 // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
 
-function  areaCylinder(h = 15, r = 20){
+function  areaCylinder(h, r){
     let res = 2 * 3.14 * h * r;
     return res;
 }
@@ -139,10 +139,14 @@ minNumber(8,15,52);
 
 // - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
 
+let array = [1,2,3];
 function plus(arr){
-    for (const item of array) {
+    let sum = 0;
+    for (const item of arr) {
+        sum += item;
     }
+    return sum;
 };
 
-let sumeOfNumbers = plus([1,2,10])
-console.log(sumeOfNumbers); //не вышло
+let sumeOfNumbers = plus(array);
+console.log(sumeOfNumbers);
