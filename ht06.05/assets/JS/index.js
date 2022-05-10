@@ -24,9 +24,9 @@ console.log(str3.toLowerCase());
 
 // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
 
-let str = ' dirty string   ';
-let trim = str.trim(' ', '');
-console.log(trim);
+let str = 'Ревуть воли як ясла повні';
+let stringToArray = (str) => str.split(' ');
+console.log(stringToArray(str))
 
 // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
 
@@ -39,21 +39,23 @@ console.log(arr);
 
 // - є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map та колбеку перетворити всі об'єкти в масиві на стрінгові.
 
-let Array = [10,8,-7,55,987,-1011,0,1050,0];
-
-let objToStr = (str) => {
-    return Array.map(str);
-}
-let arr = Array.toString();
-console.log(arr);
+let array = [10,8,-7,55,987,-1011,0,1050,0];
+// console.log(array.map(value => value.toString()));
+console.log(array.map(value => value + ''));
 
 // - створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction
 
 let nums = [11,21,3];
-let direction = prompt('please enter direction: ');
-
-let sortNums = (direction == "-") ?  nums.sort((a, b) => b - a) : ; //не вышло . вместо первого nums.sort изначально писала reverse - тоже не работает
-console.log(sortNums);
+let sortNums = (arr, direction) => {
+    if (direction === 'ascending') {
+        arr.sort((a, b) => a - b)
+    } else if (direction === 'descending') {
+        arr.sort((a, b) => b - a)
+    }
+    return arr;
+}
+console.log(sortNums(nums, 'ascending'));
+console.log(sortNums(nums, 'descending'));
 
 //
 // - є масив
@@ -77,9 +79,10 @@ let coursesAndDurationArray = [
     {title: 'Frontend', monthDuration: 4}
 ];
 
-console.log(coursesAndDurationArray.monthDuration.sort((a, b) => b -a)); //опять же не работает
-console.log(coursesAndDurationArray.find(value => value.monthDuration > 5)); // здесь нашел первый правильный(джаву) и дальше не идет искать. цикл нужен ?
-
+let sortArray = (array) => array.sort((a, b) => b.monthDuration - a.monthDuration);
+console.log(sortArray(coursesAndDurationArray));
+let filterArray = (array) => array.filter(value => value.monthDuration > 5);
+console.log(filterArray(coursesAndDurationArray));
 
 // описати колоду карт
 // {
@@ -130,13 +133,36 @@ let cards = [
 ];
 // - знайти піковий туз
 
-
-let searchVal = 'ace', cardVal = cards.find(value => value.value === searchVal).value;
-let searchSui = 'clubs', cardSui = cards.find(suit => suit.cardSuit === searchSui).cardSuit;
-
-console.log(searchSui, searchVal);// не вышло
+console.log(deckOfCards.find(value => value.cardSuit === 'clubs' && value.value === 'ace'));
+console.log(deckOfCards.filter(value => value.cardSuit === 'clubs' && value.value === 'ace'));
 
 // - всі шістки
+
+console.log(deckOfCards.filter(value => value.value === '6'));
+
 // - всі червоні карти
+
+console.log(deckOfCards.filter(value => value.color === 'red'));
+
 // - всі буби
+
+console.log(deckOfCards.filter(value => value.cardSuit === 'diamond'));
+
 // - всі трефи від 9 та більше
+
+console.log(deckOfCards.filter(value => value.cardSuit === 'clubs' && value.value > '8' || value.value === '10' && value.cardSuit === 'clubs' || value.value === 'Joker'));
+console.log(deckOfCards.filter(value => value.cardSuit === 'clubs' && value.value > '8' && value.value.length > 1 || value.value === 'Joker'));
+
+
+let obj = {
+    cardSuit : ['spade', 'diamond','heart', 'clubs'],
+    value : ['6'-'10', 'ace','jack','queen','king','joker'],
+    color : ['red','black']
+}
+
+let card = {};
+card.cardSuit = obj.cardSuit.filter(value => value === 'spade')[0];
+card.value = obj.value.filter(value => value === 'ace')[0];
+card.color = obj.color.filter(value => value === 'black')[0];
+console.log(card);
+
