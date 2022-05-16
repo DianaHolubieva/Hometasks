@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    // - Є масив:
+    //     ['Main','Products','About us','Contacts']
+    // Взяти файл template1.html та додати в нього скріпт котрий для кожного елементу масиву створює li та додає його до блоку .menu
+    // Завдання робити через цикли.
+    <ul class="arrayOfItems"></ul>
+
+    let array =  ['Main','Products','About us','Contacts'];
+    let arrayOfItems = document.getElementsByClassName('arrayOfItems');
+    for (const item of array){
+        const liElem = document.createElement('li');
+        liElem.innerText = arrayOfItems;
+        arrayOfItems.appendChild(li);
+    }
+
+</script>
+</body>
+</html>
+
+
+
+// - Є масив:
+//     ['Main','Products','About us','Contacts']
+// Взяти файл template1.html та додати в нього скріпт котрий для кожного елементу масиву створює li та додає його до блоку .menu
+// Завдання робити через цикли.
