@@ -9,11 +9,9 @@ const users = fetch('https://jsonplaceholder.typicode.com/users')
             const userCard = document.createElement('div');
             userCard.classList.add('user');
             const butt = document.createElement('button');
-            butt.innerHTML = "click me";
-            butt.innerHTML = `<a href="user-details.html">Click</a>`
+            butt.innerHTML = `<a href="user-details.html">Click me</a>`
             userCard.innerHTML = `
-                    <div>${user.id}<div>
-                    <div>${user.name}</div>
+                    <div>${user.id}, ${user.name}<div>
                     `;
 
             wraper.appendChild(userCard);

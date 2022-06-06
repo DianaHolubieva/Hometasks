@@ -1,0 +1,11 @@
+.wraper{
+    box-sizing: border-box;
+    width: 350px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button{
+    margin: 20px 20px 40px -90px;
+}
