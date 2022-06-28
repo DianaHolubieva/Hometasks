@@ -1,26 +1,26 @@
 import Users from "./components/users/Users";
+import {getUserPosts} from "./services/user.api.service";
 import {useState} from "react";
-import {getPostComments} from "./services";
+import './App.css';
+import Posts from "./components/posts/Posts";
 
 export default function App() {
 
-  let [comments, setComments] = useState([]);
-
-  const getPostId = (id) => {
-    getPostComments(id).then(({data}) => setComments([...data]));
+  let [posts, setPosts] = useState([]);
+  const elevate = (id) => {
+    getUserPosts(id).then(({data}) => {
+      setPosts([...data]);
+    })
 
   }
-  return (<div>
 
-    <h1>posts of choosen User</h1>
-    {comments.map(value => <div>{value.body}</div>)
+  return (<div className={'df'}>
 
-    }
+    <div className={'left'}><Users elevate={elevate}/></div>
+    <div className={'right'}>
+      <Posts posts={posts}/>
 
-
-    {<Users />
-      /*getUserId={getUserId}/>*/}
-
+    </div>
 
   </div>);
 }

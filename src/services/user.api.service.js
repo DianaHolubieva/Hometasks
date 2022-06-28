@@ -1,15 +1,10 @@
-
 import axios from 'axios';
 
-
 let axiosInstance = axios.create({
-    baseURL: 'https://jsonplaceholder.typicode.com/posts'
+    baseURL: 'https://jsonplaceholder.typicode.com/users'
 });
 
-const getPosts = () => axiosInstance.get('').then(value => value);
+const getUsers = () => axiosInstance.get('');
+const getUserPosts = (id) => axiosInstance.get(`/${id}/posts`);
 
-const getPost = (id) => axiosInstance.get('/' + id).then(value => value.data);
-
-const getPostComments = (id) => axiosInstance.get('/' + id + '/comments').then(value => value);
-
-export {getPosts, getPost, getPostComments}
+export {getUsers, getUserPosts};

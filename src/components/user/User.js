@@ -1,6 +1,11 @@
-export default function User({item}) {
+export default function User({user,elevate}) {
+    const onclick = () => {
+        elevate(user.id);
+
+    }
     return (<div>
-        <h2>{item.id} - {item.name}</h2>
+        {user.name}
+        <button onClick={onclick}> show posts</button>
 
     </div>);
 }

@@ -1,18 +1,21 @@
 import {useEffect, useState} from "react";
+import {getUsers} from "../../services/user.api.service";
 import User from "../user/User";
-import {getUsers} from "../../services";
 
-export default function Users() {
+export default function Users({elevate}) {
     let [users, setUsers] = useState([]);
     useEffect(() => {
-        getUsers().then(value => setUsers([...value]));
+        getUsers()
+            .then(({data}) => setUsers([...data]));
     }, []);
 
     return (<div>
-        {users.map((value) => <User
-            key={value.id}
-            item={value}/>)
-
+        {
+            users.map(user => <User
+                user={user}
+                key={user.id}
+                elevate={elevate}
+            />)
         }
 
     </div>);
